@@ -28,3 +28,8 @@ pip install qiskit-algorithms
 ```
 pip install qiskit-machine-learning
 ```
+
+# Examples
+
+![Adhoc Dataset Test 1](\examples\img\adhoc_dataset-test1.png)
+
