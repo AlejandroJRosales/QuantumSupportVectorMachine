@@ -41,5 +41,5 @@ pip install -U scikit-learn
 
 ## Examples
 
-![Adhoc Dataset Test 1](\examples\img\adhoc_dataset-test1.png)
+<img src="/examples/img/adhoc_dataset-test1.png" alt="Adhoc Dataset Test 1" width="400"/>
 
