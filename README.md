@@ -41,5 +41,18 @@ pip install -U scikit-learn
 
 ## Examples
 
-<img src="/examples/img/adhoc_dataset-test1.png" alt="Adhoc Dataset Test 1" width="400"/>
+```python
+# generate data
+data = Data()
+data.plot_dataset()
 
+# init quantum kernel
+qsvm = QSVM(data)
+# fit kernel and test fit
+qsvm.fit(test=True)
+```
+
+<img src="/examples/img/adhoc_dataset-test1.png" alt="Adhoc Dataset Test 1" width="400"/>
+```
+Callable kernel classification test score: 1.0
+```
