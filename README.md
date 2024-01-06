@@ -5,7 +5,9 @@ Read the amazing original work of the researchers on the paper, Supervised Learn
 
 You can read a summary and analysis of the math, circuitry, and quantum mechanics behind the support vector machine with quantum-enhanced feature space on my website here: https://www.context-switching.com/tcs/quantummachinelearning/#quantum-support-vector-machine
 
-# IBM Quantum Experience Installation
+# Running IBM Quantum Experience Locally
+
+## Install and Set Up Qiskit
 
 ```
 pip install qiskit
@@ -13,4 +15,16 @@ pip install qiskit
 
 ```
 pip install qiskit-ibm-runtime
+```
+
+## Qiskit Quantum Algorithms Installation
+
+```
+pip install qiskit-algorithms
+```
+
+## Qiskit Machine Learning Installation
+
+```
+pip install qiskit-machine-learning
 ```
