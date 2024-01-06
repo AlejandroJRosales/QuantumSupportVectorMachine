@@ -1,5 +1,4 @@
 import numpy as np
-# plotting libs
 import matplotlib.pyplot as plt
 # dataset libs
 from qiskit_algorithms.utils import algorithm_globals
@@ -9,33 +8,34 @@ from qiskit.circuit.library import ZZFeatureMap
 from qiskit.primitives import Sampler
 from qiskit_algorithms.state_fidelities import ComputeUncompute
 from qiskit_machine_learning.kernels import FidelityQuantumKernel
-# SVC lib
+# SVClassification lib
 from sklearn.svm import SVC
 
 
 class QSVM:
-    def __init__(self):
+    def __init__(self, data):
         # init quantum kernel
-        quantum_kernel()
+        self.data = data
+        self.quantum_kernel()
 
-    def fit(test=False):
+    def fit(self, test=False):
         self.fit_kernel()
         if test:
             self.test_fit()
 
     def quantum_kernel(self):
         # 2-qubit ZZ feature mapping
-        self.adhoc_feature_map = ZZFeatureMap(feature_dimension=adhoc_dimension, reps=2, entanglement="linear")
+        self.adhoc_feature_map = ZZFeatureMap(feature_dimension=data.adhoc_dimension, reps=2, entanglement="linear")
         self.sampler = Sampler()
-        self.fidelity = ComputeUncompute(sampler=sampler)
-        self.adhoc_kernel = FidelityQuantumKernel(fidelity=fidelity, feature_map=adhoc_feature_map)
+        self.fidelity = ComputeUncompute(sampler=self.sampler)
+        self.adhoc_kernel = FidelityQuantumKernel(fidelity=self.fidelity, feature_map=self.adhoc_feature_map)
 
     def fit_kernel(self):
         self.adhoc_svc = SVC(kernel=self.adhoc_kernel.evaluate)
-        self.adhoc_svc.fit(train_features, train_labels)
+        self.adhoc_svc.fit(data.train_features, data.train_labels)
 
     def test_fit(self):
-        adhoc_score_callable_function = self.adhoc_svc.score(test_features, test_labels)
+        adhoc_score_callable_function = self.adhoc_svc.score(data.test_features, data.test_labels)
         print(f"Callable kernel classification test score: {adhoc_score_callable_function}")
 
 
@@ -101,5 +101,5 @@ class Data:
 data = Data()
 data.plot_dataset()
 
-qsvm = QSVM()
+qsvm = QSVM(data)
 qsvm.fit(test=True)
