@@ -5,6 +5,8 @@ Read the amazing original work of the researchers on the paper, Supervised Learn
 
 You can read a summary and analysis of the math, circuitry, and quantum mechanics behind the support vector machine with quantum-enhanced feature space on my website here: https://www.contextswitching.org/tcs/quantumsvm/
 
+Also, you can read an introduction to quantum computing theory on my website here: https://www.contextswitching.org/tcs/quantumcomputingtheory/
+
 ## Installation
 
 ### Running IBM Quantum Experience Locally
